@@ -1,0 +1,47 @@
+.second21 {
+    width: 370px;
+    height: 440px;
+    border-radius: 70px;
+    box-shadow: 1px 1px 10px black;
+  }
+  .second21 img {
+    border-radius: 70px;
+  }
+  .garchig {
+    width: 330px;
+    height: fit-content;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 29px;
+    margin-left: 10px;
+    margin-top: 23px;
+  }
+  .paragraph {
+    width: 320px;
+    height: fit-content;
+    margin-top: 20px;
+  }
+  .paragraph p {
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 20px;
+  }
+  .info {
+    width: 330px;
+    height: 60px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-left: 25px;
+    margin-top: 40px;
+  }
+  .info p {
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 18px;
+    color: grey;
+  }
+  .info div {
+    height: 12px;
+    border-left: 1px solid grey;
+  }
