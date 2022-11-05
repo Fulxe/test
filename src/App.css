@@ -2,6 +2,7 @@
   margin: 0;
   padding: 0;
 }
+
 .App {
   width: 100%;
   height: 100vh;
@@ -269,4 +270,9 @@
 .darkMode {
   background-color: white;
   /* color: aliceblue; */
+}
+.bugd {
+  width: 100%;
+  height: 100vh ;
+  display: flex;
 }
