@@ -11,6 +11,7 @@ import Img9 from "./image/img9.jpg";
 import Post from "./second/Second";
 import { useContext } from "react";
 import { DarkMode } from "./theme";
+import { Link } from "react-router-dom";
 // import axios from "axios";
 import React, { useState } from "react";
 
@@ -80,6 +81,7 @@ function App() {
       <div className="margin"></div>
       <div className="posts">
         <div className="post2">
+          <Link to="/pro">Product</Link>
           <Post
             image={Img1}
             text={
@@ -262,4 +264,5 @@ function Logo() {
     </div>
   );
 }
+
 export default App;
