@@ -11,12 +11,32 @@ import Img9 from "./image/img9.jpg";
 import Post from "./second/Second";
 import { useContext } from "react";
 import { DarkMode } from "./theme";
+// import axios from "axios";
+import React, { useState } from "react";
 
 function App() {
+  // const [data, setData] = useState([]);
+
+  // const getData = async () => {
+  //   try {
+  //     const res = await axios.get("https://dummyapi.io/data/v1/post?limit=10", {
+  //       headers: {
+  //         "Content-type": "application/json; charset=UTF-8",
+  //         "app-id": "636a0100b23c1794f297d097",
+  //       },
+  //     });
+
+  //     setData(res.data.data);
+
+  //     console.log(res.data.data);
+  //   } catch (err) {
+  //     alert("dahiad yavul");
+  //   }
+  // };
   const { ToggleSwitch, darkMode } = useContext(DarkMode);
   console.log(darkMode);
   return (
-    <div className="App" style={{ backgroundColor: darkMode && "black" }}>
+    <div className="App" style={{ backgroundColor: darkMode && "gray" }}>
       <div className="navbar">
         <Logo />
         <div className="navbar-right">
@@ -24,10 +44,18 @@ function App() {
             <input type="checkbox" onChange={ToggleSwitch}></input>
             <span class="slider-round"></span>
           </label>
-          <div className="nv-text">Product</div>
-          <div className="nv-text">Services</div>
-          <div className="nv-text">Contact</div>
-          <div className="nv-text">Log in</div>
+          <div className="nv-text" style={{ color: darkMode && "black" }}>
+            Product
+          </div>
+          <div className="nv-text" style={{ color: darkMode && "black" }}>
+            Services
+          </div>
+          <div className="nv-text" style={{ color: darkMode && "black" }}>
+            Contact
+          </div>
+          <div className="nv-text" style={{ color: darkMode && "black" }}>
+            Log in
+          </div>
           <div className="nv-tex">
             <p>Get Access</p>
           </div>
@@ -41,6 +69,14 @@ function App() {
           </p>
         </div>
       </div>
+      {/* <div className="Nam">
+        <h1>Hi</h1>
+        <button onClick={getData}>send request</button>
+
+        {data.map((cur) => (
+          <div>{cur.text}</div>
+        ))}
+      </div> */}
       <div className="margin"></div>
       <div className="posts">
         <div className="post2">
