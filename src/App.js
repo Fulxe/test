@@ -9,22 +9,19 @@ import Img7 from "./image/img7.jpg";
 import Img8 from "./image/img8.jpg";
 import Img9 from "./image/img9.jpg";
 import Post from "./second/Second";
-import {useContext} from "react"
+import { useContext } from "react";
 import { DarkMode } from "./theme";
 
-
-
 function App() {
-
-  const {ToggleSwitch , darkMode} = useContext(DarkMode)
-  console.log(darkMode)
+  const { ToggleSwitch, darkMode } = useContext(DarkMode);
+  console.log(darkMode);
   return (
-    <div className="App" style={{backgroundColor: darkMode && 'black'}}>
+    <div className="App" style={{ backgroundColor: darkMode && "black" }}>
       <div className="navbar">
         <Logo />
         <div className="navbar-right">
           <label className="switch">
-            <input type="checkbox" onChange={ToggleSwitch}  ></input>
+            <input type="checkbox" onChange={ToggleSwitch}></input>
             <span class="slider-round"></span>
           </label>
           <div className="nv-text">Product</div>
@@ -37,9 +34,11 @@ function App() {
         </div>
       </div>
       <div className="Head">
-        <div className="head2" >
-          <h1 style={{color:darkMode && 'white' }}>Blog posts</h1>
-          <p style={{color:darkMode && 'white' }}>Our latest updates and blogs about managing your team</p>
+        <div className="head2">
+          <h1 style={{ color: darkMode && "white" }}>Blog posts</h1>
+          <p style={{ color: darkMode && "white" }}>
+            Our latest updates and blogs about managing your team
+          </p>
         </div>
       </div>
       <div className="margin"></div>
@@ -219,11 +218,11 @@ function App() {
   );
 }
 function Logo() {
-  const {ToggleSwitch , darkMode} = useContext(DarkMode)
+  const { ToggleSwitch, darkMode } = useContext(DarkMode);
 
   return (
     <div className="navbar-left">
-      <p style={{color: darkMode && 'white'}}>Team</p>
+      <p style={{ color: darkMode && "white" }}>Team</p>
     </div>
   );
 }
