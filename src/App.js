@@ -1,4 +1,5 @@
 import "./App.css";
+import React from "react";
 import Img1 from "./image/img1.jpg";
 import Img2 from "./image/img2.jpg";
 import Img3 from "./image/Image (3).jpg";
@@ -12,28 +13,28 @@ import Post from "./second/Second";
 import { useContext } from "react";
 import { DarkMode } from "./theme";
 import { Link } from "react-router-dom";
-// import axios from "axios";
+import axios from "axios";
 import React, { useState } from "react";
 
 function App() {
-  // const [data, setData] = useState([]);
+  const [data, setData] = useState([]);
 
-  // const getData = async () => {
-  //   try {
-  //     const res = await axios.get("https://dummyapi.io/data/v1/post?limit=10", {
-  //       headers: {
-  //         "Content-type": "application/json; charset=UTF-8",
-  //         "app-id": "636a0100b23c1794f297d097",
-  //       },
-  //     });
+  const getData = async () => {
+    try {
+      const res = await axios.get("https://dummyapi.io/data/v1/post?limit=10", {
+        headers: {
+          "Content-type": "application/json; charset=UTF-8",
+          "app-id": "636a0100b23c1794f297d097",
+        },
+      });
 
-  //     setData(res.data.data);
+      setData(res.data.data);
 
-  //     console.log(res.data.data);
-  //   } catch (err) {
-  //     alert("dahiad yavul");
-  //   }
-  // };
+      console.log(res.data.data);
+    } catch (err) {
+      alert("dahiad yavul");
+    }
+  };
   const { ToggleSwitch, darkMode } = useContext(DarkMode);
   console.log(darkMode);
   return (
@@ -70,14 +71,14 @@ function App() {
           </p>
         </div>
       </div>
-      {/* <div className="Nam">
+      <div className="Nam">
         <h1>Hi</h1>
         <button onClick={getData}>send request</button>
 
         {data.map((cur) => (
           <div>{cur.text}</div>
         ))}
-      </div> */}
+      </div>
       <div className="margin"></div>
       <div className="posts">
         <div className="post2">
