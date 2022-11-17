@@ -14,7 +14,7 @@ import { useContext } from "react";
 import { DarkMode } from "./theme";
 import { Link } from "react-router-dom";
 import axios from "axios";
-import React, { useState } from "react";
+import {useState } from "react";
 
 function App() {
   const [data, setData] = useState([]);
